@@ -6,13 +6,8 @@ import { fileURLToPath } from 'url';
 const app = express();
 const PORT = 3000;
 
-// Use environment variable for MongoDB URI
-const MONGODB_URI = process.env.MONGODB_URI;
-if (!MONGODB_URI) {
-  console.error('Error: MONGODB_URI environment variable is not set.');
-  process.exit(1);
-}
-
+// ⛔ WARNING: Don't use hardcoded credentials in production
+const MONGODB_URI = 'mongodb+srv://binod:binod123@cluster0.heugg6b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const client = new MongoClient(MONGODB_URI);
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
