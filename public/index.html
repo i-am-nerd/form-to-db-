@@ -76,9 +76,13 @@
     }
 
     .verify-image {
-        width: 190px , 150px;
-        margin-bottom: 5px;
-        
+        width: 90vw;         /* Responsive width: 90% of the viewport */
+         max-width: 450px;    /* Prevents it from being too large on bigger screens */
+        height: auto;        /* Maintain aspect ratio */
+        display: block;
+         margin: 1rem auto 1rem auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
   </style>
 </head>
